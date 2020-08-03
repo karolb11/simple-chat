@@ -1,23 +1,18 @@
-package com.example.websockets;
+package com.example.websockets.controller;
 
 import java.security.Principal;
 import java.util.Map;
 
+import com.example.websockets.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.messaging.rsocket.annotation.ConnectMapping;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.annotation.SendToUser;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
-import org.springframework.messaging.simp.user.SimpUserRegistry;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.stereotype.Controller;
 
 import com.google.gson.Gson;
-
-import javax.websocket.OnOpen;
 
 @Controller
 public class WebSocketController {
@@ -34,7 +29,7 @@ public class WebSocketController {
                 .to(messageDestination)
                 .build();
         messagingTemplate.convertAndSendToUser(messageDestination, "/queue/reply", message);
-        return message.content;
+        return message.getContent();
     }
 
     @MessageExceptionHandler

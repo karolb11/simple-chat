@@ -1,4 +1,4 @@
-package com.example.websockets;
+package com.example.websockets.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.user.SimpUser;
@@ -13,8 +13,8 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @org.springframework.web.bind.annotation.RestController
-@RequestMapping("/chat")
-public class RestController {
+@RequestMapping("/api/chat")
+public class ChatRestController {
 
     @Autowired
     SimpUserRegistry simpUserRegistry;
