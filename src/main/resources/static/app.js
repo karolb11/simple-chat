@@ -38,7 +38,7 @@ function connect() {
 }
 
 function getConnectedUsers() {
-	$.get("http://" + host + "/chat/connectedUsers", function (data) {
+	$.get("http://" + host + "/api/chat/connectedUsers", function (data) {
 		console.log(data);
 		connectedUsers = new Set(data);
 		reloadConnectedUsersList();
