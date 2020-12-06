@@ -2,7 +2,7 @@ package com.example.websockets.eventHandler;
 
 import com.example.websockets.notification.Notification;
 import com.example.websockets.notification.NotificationType;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.stereotype.Component;
@@ -11,9 +11,9 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 import java.util.Objects;
 
 @Component
+@RequiredArgsConstructor
 public class DisconnectEventHandler {
-    @Autowired
-    private SimpMessageSendingOperations messagingTemplate;
+    private final SimpMessageSendingOperations messagingTemplate;
 
     @EventListener
     public void onSessionDisconnect(SessionDisconnectEvent event) {

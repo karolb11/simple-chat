@@ -4,7 +4,7 @@ import java.security.Principal;
 import java.util.Map;
 
 import com.example.websockets.model.Message;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -15,9 +15,9 @@ import org.springframework.stereotype.Controller;
 import com.google.gson.Gson;
 
 @Controller
+@RequiredArgsConstructor
 public class WebSocketController {
-    @Autowired
-    private SimpMessageSendingOperations messagingTemplate;
+    private final SimpMessageSendingOperations messagingTemplate;
 
     @MessageMapping("/message")
     public String processMessageFromClient(@Payload String messagePayload, Principal principal) throws Exception {
