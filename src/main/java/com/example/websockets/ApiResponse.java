@@ -1,4 +1,4 @@
-package com.example.websockets.payload;
+package com.example.websockets;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

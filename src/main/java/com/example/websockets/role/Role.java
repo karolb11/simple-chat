@@ -1,4 +1,4 @@
-package com.example.websockets.model;
+package com.example.websockets.role;
 
 import lombok.Data;
 import org.hibernate.annotations.NaturalId;

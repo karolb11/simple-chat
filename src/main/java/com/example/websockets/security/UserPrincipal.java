@@ -1,6 +1,6 @@
 package com.example.websockets.security;
 
-import com.example.websockets.model.User;
+import com.example.websockets.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

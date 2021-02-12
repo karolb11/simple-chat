@@ -1,9 +1,8 @@
-package com.example.websockets.eventHandler;
+package com.example.websockets.websocket.eventHandler;
 
 import com.example.websockets.notification.Notification;
 import com.example.websockets.notification.NotificationType;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.stereotype.Component;

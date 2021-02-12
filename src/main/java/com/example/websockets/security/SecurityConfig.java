@@ -18,7 +18,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
     final UserDetailsServiceImpl userDetailsService;
 
     @Bean
@@ -55,7 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .disable()
                 .authorizeRequests()
                 .antMatchers("/api/auth/**")
-                    .permitAll()
+                .permitAll()
                 .anyRequest().authenticated();
     }
 

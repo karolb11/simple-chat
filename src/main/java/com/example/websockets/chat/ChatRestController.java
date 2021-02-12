@@ -1,4 +1,4 @@
-package com.example.websockets.controller;
+package com.example.websockets.chat;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

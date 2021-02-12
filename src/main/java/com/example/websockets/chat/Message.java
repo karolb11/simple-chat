@@ -1,4 +1,4 @@
-package com.example.websockets.model;
+package com.example.websockets.chat;
 
 import lombok.Builder;
 import lombok.Data;

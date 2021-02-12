@@ -1,10 +1,8 @@
 package com.example.websockets.security;
 
-import com.example.websockets.model.User;
-import com.example.websockets.repository.UserRepository;
-import lombok.AllArgsConstructor;
+import com.example.websockets.user.User;
+import com.example.websockets.user.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

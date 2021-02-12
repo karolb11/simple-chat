@@ -1,4 +1,4 @@
-package com.example.websockets;
+package com.example.websockets.websocket;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.server.ServerHttpRequest;

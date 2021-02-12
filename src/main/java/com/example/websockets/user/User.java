@@ -1,11 +1,14 @@
-package com.example.websockets.model;
+package com.example.websockets.user;
 
+import com.example.websockets.mailThread.MailThread;
+import com.example.websockets.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -27,4 +30,7 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    @ManyToMany(mappedBy = "members")
+    private List<MailThread> mailThreads;
 }

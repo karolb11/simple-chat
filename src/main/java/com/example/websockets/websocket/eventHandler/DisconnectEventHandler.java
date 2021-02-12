@@ -1,4 +1,4 @@
-package com.example.websockets.eventHandler;
+package com.example.websockets.websocket.eventHandler;
 
 import com.example.websockets.notification.Notification;
 import com.example.websockets.notification.NotificationType;

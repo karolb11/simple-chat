@@ -1,9 +1,9 @@
-package com.example.websockets.controller;
+package com.example.websockets.websocket;
 
 import java.security.Principal;
 import java.util.Map;
 
-import com.example.websockets.model.Message;
+import com.example.websockets.chat.Message;
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;

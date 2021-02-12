@@ -1,4 +1,4 @@
-package com.example.websockets.payload;
+package com.example.websockets.auth;
 
 import lombok.Data;
 
